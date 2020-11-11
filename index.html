@@ -13,47 +13,51 @@
   <!-- search button within Jumbotron and save to local storage -->
   <div class="jumbotron">
     <h1 class="display-4">Current Weather</h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <p class="lead">An Efficient Weather App.</p>
     <hr class="my-4">
-    <h3 id="currentDay"></h3>
+    <h3 id="currentDay" ></h3>
   </div>
  
 
   <container class="row">
     <div class="card" id="localStorage-card" style="width: 18rem;">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-        <input type="search" class="form-control" id="exampleFormControlInput1" placeholder="Search Current Weather">    
+        <h5 class="card-title">Search Weather</h5>
+        <input type="search" class="form-control" id="cityName" placeholder="Search Weather by City">    
         <a class="btn btn-primary btn-lg" id="searchBtn" href="#" role="button">Search</a>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
+        <hr class="my-4">
+        <h6 id="searchCity" class="card-subtitle mb-2 text-muted">Recent Searches:</h6>
+        <p name="searchHistory"></p>
       </div>
     </div>
     <!--5 day forcast-->
-    <div class="card"id="weather-card"  style="width: 60rem;">
+    <div class="card"id="`weather-card"  style="width: 60rem;">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
+        <h5 class="card-title">Current Weather</h5>
+       <div>
         <p class="currentWeather-card"> 
           <div id="icon"></div>
           <!-- Retrieved data will be dumped here -->
-          <div class="city"></div>
-          <div class="temp"></div>
-          <div class="wind"></div>
-          <div class="humidity"></div>
+          <div class="city">-</div>
+          <div class="temp">-</div>
+          <div class="wind">-</div>
+          <div class="humidity">-</div>
           UV Index:
-          <div id="uv"></div>
+          <div class="uv"></div>
         </p>
+      </div>
+      <div class="card-subtitle mb-2 text-muted">
         <hr class="my-4">
-        <h6 id="date1" class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+        <h6 id="date1"></h6>
         <p class="card-weather1"> 
           <!-- Retrieved data will be dumped here -->
           <div class="humidity1"></div>
           <div class="temp1"></div>
 
         </p>
-        <h6 id="date2" class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+      </div>
+      <div class="card-subtitle mb-2 text-muted">
+        <h6 id="date2"></h6>
         <p class="card-weather2"> 
           <div id="icon2"></div>
           <!-- Retrieved data will be dumped here -->
@@ -61,7 +65,9 @@
           <div class="temp2"></div>
 
         </p>
-        <h6 id="date3" class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+      </div>
+      <div class="card-subtitle mb-2 text-muted">
+        <h6 id="date3"></h6>
         <p class="card-weather3"> 
           <div id="icon3"></div>
           <!-- Retrieved data will be dumped here -->
@@ -69,7 +75,9 @@
           <div class="temp3"></div>
 
         </p>
-        <h6 id="date4" class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+      </div>
+      <div class="card-subtitle mb-2 text-muted">
+        <h6 id="date4"></h6>
         <p class="card-weather4"> 
           <div id="icon4"></div>
           <!-- Retrieved data will be dumped here -->
@@ -77,7 +85,9 @@
           <div class="temp4"></div>
 
         </p>
-        <h6 id="date5" class="card-subtitle mb-2 text-muted"></h6>
+      </div>
+      <div class="card-subtitle mb-2 text-muted">
+        <h6 id="date5"></h6>
         <p class="card-text"> 
           <div id="icon5"></div>
           <!-- Retrieved data will be dumped here -->
@@ -85,7 +95,7 @@
           <div class="temp5"></div>
 
         </p>
-
+      </div>
       </div>
     </div>
 
@@ -95,8 +105,8 @@
 ​
   
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="index.js"></script>
 <script src="https://kit.fontawesome.com/b6862206f9.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="index.js"></script>
+
 </html>
