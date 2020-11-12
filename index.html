@@ -27,75 +27,64 @@
         <a class="btn btn-primary btn-lg" id="searchBtn" href="#" role="button">Search</a>
         <hr class="my-4">
         <h6 id="searchCity" class="card-subtitle mb-2 text-muted">Recent Searches:</h6>
-        <p name="searchHistory"></p>
+        <p id="loadCityName"></p>
       </div>
     </div>
     <!--5 day forcast-->
-    <div class="card"id="`weather-card"  style="width: 60rem;">
+    <div class="card" id="weather-card" style="width: 60rem;">
       <div class="card-body">
-        <h5 class="card-title">Current Weather</h5>
-       <div>
-        <p class="currentWeather-card"> 
-          <div id="icon"></div>
-          <!-- Retrieved data will be dumped here -->
-          <div class="city">-</div>
-          <div class="temp">-</div>
-          <div class="wind">-</div>
-          <div class="humidity">-</div>
-          UV Index:
-          <div class="uv"></div>
-        </p>
-      </div>
-      <div class="card-subtitle mb-2 text-muted">
-        <hr class="my-4">
-        <h6 id="date1"></h6>
-        <p class="card-weather1"> 
-          <!-- Retrieved data will be dumped here -->
-          <div class="humidity1"></div>
-          <div class="temp1"></div>
-
-        </p>
-      </div>
-      <div class="card-subtitle mb-2 text-muted">
-        <h6 id="date2"></h6>
-        <p class="card-weather2"> 
-          <div id="icon2"></div>
-          <!-- Retrieved data will be dumped here -->
-          <div class="humidity2"></div>
-          <div class="temp2"></div>
-
-        </p>
-      </div>
-      <div class="card-subtitle mb-2 text-muted">
-        <h6 id="date3"></h6>
-        <p class="card-weather3"> 
-          <div id="icon3"></div>
-          <!-- Retrieved data will be dumped here -->
-          <div class="humidity3"></div>
-          <div class="temp3"></div>
-
-        </p>
-      </div>
-      <div class="card-subtitle mb-2 text-muted">
-        <h6 id="date4"></h6>
-        <p class="card-weather4"> 
-          <div id="icon4"></div>
-          <!-- Retrieved data will be dumped here -->
-          <div class="humidity4"></div>
-          <div class="temp4"></div>
-
-        </p>
-      </div>
-      <div class="card-subtitle mb-2 text-muted">
-        <h6 id="date5"></h6>
-        <p class="card-text"> 
-          <div id="icon5"></div>
-          <!-- Retrieved data will be dumped here -->
-          <div class="humidity5"></div>
-          <div class="temp5"></div>
-
-        </p>
-      </div>
+          <h4 class="card-title">Current Weather</h4>
+        <div>
+          <p class="currentWeather-card"> 
+            <div id="icon"></div>
+            <!-- Retrieved data will be dumped here -->
+            <div class="city">-</div>
+            <div class="temp">-</div>
+            <div class="wind">-</div>
+            <div class="humidity">-</div>
+            UV Index:
+            <div class="uv"></div>
+          </p>
+        </div>
+        <div id="row" class="currentFiveDay" style="display: flex; flex-wrap: wrap;">
+          <h5 class="card-title">Five Day Forcast</h5>
+          <div class="card-subtitle mb-2">
+            <hr class="my-4">
+            <h6 id="date1"></h6>
+            <div id="icon1"></div>
+              <!-- Retrieved data will be dumped here -->
+              <div class="humidity1"></div>
+              <div class="temp1"></div>
+          </div>
+          <div class="card-subtitle mb-2">
+            <h6 id="date2"></h6>
+              <div id="icon2"></div>
+              <!-- Retrieved data will be dumped here -->
+              <div class="humidity2"></div>
+              <div class="temp2"></div>
+          </div>
+          <div class="card-subtitle mb-2">
+            <h6 id="date3"></h6>
+              <div id="icon3"></div>
+              <!-- Retrieved data will be dumped here -->
+              <div class="humidity3"></div>
+              <div class="temp3"></div>
+          </div>
+          <div class="card-subtitle mb-2">
+            <h6 id="date4"></h6>
+              <div id="icon4"></div>
+              <!-- Retrieved data will be dumped here -->
+              <div class="humidity4"></div>
+              <div class="temp4"></div>
+          </div>
+          <div class="card-subtitle mb-2">
+            <h6 id="date5"></h6>
+              <div id="icon5"></div>
+              <!-- Retrieved data will be dumped here -->
+              <div class="humidity5"></div>
+              <div class="temp5"></div>
+          </div>
+        </div>
       </div>
     </div>
 
