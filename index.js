@@ -8,25 +8,20 @@ var APIkey = "3ab9c663741007177d4cd151315964af";
 
 var searchCity = localStorage.search ? JSON.parse(localStorage.search) : [];
 
-
+displaySearchCity();
 searchBtn.addEventListener('click', function () {
   const cityName = document.querySelector('#cityName').value
   console.log(`hi there cityName=${cityName}`)
 
-  searchCity.push(cityName)
-  localStorage.search = JSON.stringify(searchCity)
-  displaySearchCity();
+
   getWeather(cityName)
 });
-// function search( searchWeather ){
-// $('#search').append(`
-// <button onclick="getWeather('${searchWeather}'">${searchWeather}</button>) 
-// } 
+
 var saveName = [];
 
 function displaySearchCity() {
   console.log(searchCity)
-
+  document.querySelector('#loadCityName').innerHTML = ""
   for (var i = 0; i < searchCity.length; i++) {
     if (searchCity[i]) {
       saveName = searchCity[i]
@@ -37,16 +32,6 @@ function displaySearchCity() {
 }
 
 
-function loadSearchCity() {
-  document.getElementById('searchCity')
-  //  document.querySelector("#search-list").innerHTML+=`
-  //     <button type="button" class="btn btn-warning" onClick="clearAll()">Clear All</button>`
-  for (let i = 0; i < searchCity.length; i++) {
-    document.querySelector("#searchCity").innerHTML += `
-              <button class="btn btn-primary btn-lg" onclick="sideBarSearch('${searchCity[i]}')">${searchCity[i]}</button>`
-  }
-
-}
 
 
 // current day, month, date, year and time and updates every second
@@ -72,6 +57,13 @@ function getWeather(cityName) {
     apiData = currentResponse
     // $('#currentWeather-card').append(currentResponse)
 
+    if(!searchCity.includes(cityName)){
+      searchCity.push(cityName)
+      localStorage.search = JSON.stringify(searchCity)
+      displaySearchCity();
+    }
+
+
     document.querySelector('.city').textContent = 'City: ' + apiData.name
     document.querySelector('.wind').textContent = 'Wind Speed: ' + apiData.wind.speed + 'm/s';
     document.querySelector('.humidity').textContent = 'Humidity: ' + apiData.main.humidity + '%';
@@ -84,6 +76,8 @@ function getWeather(cityName) {
       .then(function (oneCallResponse) {
         console.log(`oneCallResponse: `, oneCallResponse.value)
         document.querySelector('.uv').textContent = oneCallResponse.value
+
+      
 
       })
 

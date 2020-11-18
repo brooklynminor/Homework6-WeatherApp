@@ -46,16 +46,18 @@
             <div class="uv"></div>
           </p>
         </div>
-        <div id="row" class="currentFiveDay" style="display: flex; flex-wrap: wrap;">
+        <div id="row" class="currentFiveDay" style="display: flex; flex-direction: column;">
           <h5 class="card-title">Five Day Forcast</h5>
+          <div style="display: flex; flex-wrap: wrap;">
           <div class="card-subtitle mb-2">
-            <hr class="my-4">
+            <!-- <hr class="my-4"> -->
             <h6 id="date1"></h6>
             <div id="icon1"></div>
               <!-- Retrieved data will be dumped here -->
               <div class="humidity1"></div>
               <div class="temp1"></div>
           </div>
+
           <div class="card-subtitle mb-2">
             <h6 id="date2"></h6>
               <div id="icon2"></div>
@@ -63,6 +65,7 @@
               <div class="humidity2"></div>
               <div class="temp2"></div>
           </div>
+
           <div class="card-subtitle mb-2">
             <h6 id="date3"></h6>
               <div id="icon3"></div>
@@ -84,6 +87,7 @@
               <div class="humidity5"></div>
               <div class="temp5"></div>
           </div>
+        </div>
         </div>
       </div>
     </div>
